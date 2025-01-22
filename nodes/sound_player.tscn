@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3qhn0mahvwya"]
+
+[ext_resource type="Script" path="res://script/SoundPlayer.cs" id="1_ihqp1"]
+[ext_resource type="AudioStream" uid="uid://du0ppswfjs1nl" path="res://assets/sound/warning.MP3" id="2_dy40r"]
+[ext_resource type="AudioStream" uid="uid://0o7x63paweeg" path="res://assets/sound/next_level_sound.MP3" id="3_015yg"]
+
+[node name="SoundPlayer" type="Node2D"]
+script = ExtResource("1_ihqp1")
+
+[node name="TouchBlackTileSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_dy40r")
+
+[node name="NextLevelSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_015yg")

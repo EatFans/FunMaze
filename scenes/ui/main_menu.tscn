@@ -1,0 +1,92 @@
+[gd_scene load_steps=6 format=3 uid="uid://cg1uunno5towl"]
+
+[ext_resource type="Script" path="res://script/main_menu.cs" id="1_2sgce"]
+[ext_resource type="Texture2D" uid="uid://cjm716qnqga4f" path="res://assets/texture/title.png" id="2_337sg"]
+[ext_resource type="AudioStream" uid="uid://0ciyku80any6" path="res://assets/sound/FunMazeBGM.MP3" id="3_ckxfr"]
+
+[sub_resource type="FontFile" id="FontFile_02af5"]
+cache/0/28/0/ascent = 0.0
+cache/0/28/0/descent = 0.0
+cache/0/28/0/underline_position = 0.0
+cache/0/28/0/underline_thickness = 0.0
+cache/0/28/0/scale = 1.0
+cache/0/28/0/kerning_overrides/28/0 = Vector2(0, 0)
+cache/0/28/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/28/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[sub_resource type="Theme" id="Theme_63x1n"]
+default_font = SubResource("FontFile_02af5")
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2sgce")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.006
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -49.088
+offset_top = -54.0
+offset_right = 49.0
+offset_bottom = 73.0
+color = Color(0.00184107, 0.00184107, 0.00184107, 1)
+
+[node name="Title" type="TextureRect" parent="Background"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.218
+anchor_right = 0.5
+anchor_bottom = 0.218
+offset_left = -244.5
+offset_top = -141.7
+offset_right = 244.5
+offset_bottom = 141.3
+grow_horizontal = 2
+texture = ExtResource("2_337sg")
+
+[node name="UI" type="VBoxContainer" parent="Background"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.566
+anchor_right = 0.5
+anchor_bottom = 0.566
+offset_left = -212.0
+offset_top = -26.9
+offset_right = 230.0
+offset_bottom = 109.1
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/UI"]
+layout_mode = 2
+theme = SubResource("Theme_63x1n")
+
+[node name="StartGameButton" type="Button" parent="Background/UI/VBoxContainer"]
+layout_mode = 2
+text = "Start Game"
+
+[node name="ExitGameButtin" type="Button" parent="Background/UI/VBoxContainer"]
+layout_mode = 2
+text = "Exit Game
+"
+
+[node name="BGM" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ckxfr")
+
+[connection signal="pressed" from="Background/UI/VBoxContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="Background/UI/VBoxContainer/ExitGameButtin" to="." method="_on_exit_game_buttin_pressed"]

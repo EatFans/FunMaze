@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdcerejai7pit"]
+
+[ext_resource type="Script" path="res://script/BackgroundMusicManager.cs" id="1_lyn4u"]
+[ext_resource type="AudioStream" uid="uid://0ciyku80any6" path="res://assets/sound/FunMazeBGM.MP3" id="2_x2rcd"]
+
+[node name="BackgroundMusicManager" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lyn4u")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_x2rcd")

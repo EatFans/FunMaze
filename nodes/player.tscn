@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dkmyhkmxtjkq0"]
+
+[ext_resource type="Script" path="res://script/player.cs" id="1_h5xc0"]
+[ext_resource type="Texture2D" uid="uid://bprunoi4rx21g" path="res://assets/texture/player.png" id="1_nkb5s"]
+[ext_resource type="AudioStream" uid="uid://du0ppswfjs1nl" path="res://assets/sound/warning.MP3" id="3_13y2i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dqxa8"]
+size = Vector2(14, 14.5)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_h5xc0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 1)
+texture = ExtResource("1_nkb5s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_dqxa8")
+
+[node name="TouchBlackTile" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_13y2i")
