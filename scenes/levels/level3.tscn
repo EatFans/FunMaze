@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bx8rd1nhi2uyf"]
+[gd_scene load_steps=10 format=3 uid="uid://bx8rd1nhi2uyf"]
 
 [ext_resource type="Script" path="res://script/level3.cs" id="1_gl75g"]
 [ext_resource type="Texture2D" uid="uid://n2ubg0dpbgsh" path="res://assets/texture/brick.png" id="2_6pfvs"]
 [ext_resource type="PackedScene" uid="uid://dkmyhkmxtjkq0" path="res://nodes/player.tscn" id="3_umlll"]
+[ext_resource type="PackedScene" uid="uid://sl7awiemw31s" path="res://nodes/monster1.tscn" id="4_nvfqs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nhiyy"]
 texture = ExtResource("2_6pfvs")
@@ -51,5 +52,8 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Player" parent="." instance=ExtResource("3_umlll")]
 position = Vector2(1025, 571)
+
+[node name="monster" parent="." instance=ExtResource("4_nvfqs")]
+position = Vector2(360, 101)
 
 [connection signal="pressed" from="TileMap/ReturnButton" to="." method="_on_return_button_pressed"]

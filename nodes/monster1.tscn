@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://sl7awiemw31s"]
+
+[ext_resource type="Script" path="res://script/monster.cs" id="1_gljqi"]
+[ext_resource type="Texture2D" uid="uid://boemu224p3ral" path="res://assets/texture/monster.png" id="2_iw0np"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5xc1r"]
+size = Vector2(26.5, 27.25)
+
+[node name="monster" type="CharacterBody2D"]
+script = ExtResource("1_gljqi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_iw0np")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5xc1r")

@@ -10,7 +10,7 @@ public partial class player : CharacterBody2D
 	private bool isSwitchingLevel = false;
     public override void _Ready()
     {
-
+		GD.Print("玩家已经加载");
     }
 
     public override void _PhysicsProcess(double delta)

@@ -1,14 +1,19 @@
 using Godot;
 using System;
 
+/**
+ *  怪物节点类
+ */
 public partial class monster : CharacterBody2D
 {
-	public const float Speed = 300.0f;
-	public const float JumpVelocity = -400.0f;
+	public const float Speed = 80.0f; // 速度
 
-	public float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
+    public override void _Ready()
+    {
+        GD.Print("怪物已经加载");
+    }
 
-	public override void _PhysicsProcess(double delta)
+    public override void _PhysicsProcess(double delta)
 	{
 		
 	}
