@@ -37,6 +37,7 @@ public partial class player : CharacterBody2D
 			SoundPlayer.Instance.playTouchBlackTileSound();
 	        GD.Print($"初始化玩家位置 {Position}");
             GetTree().ReloadCurrentScene();
+			
 
 		} else if (tileId == 3)
 		{
