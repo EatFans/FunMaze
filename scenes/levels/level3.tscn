@@ -54,6 +54,6 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(1002, 561)
 
 [node name="monster1" parent="." instance=ExtResource("4_nvfqs")]
-position = Vector2(358, 101)
+position = Vector2(380, 96)
 
 [connection signal="pressed" from="TileMap/ReturnButton" to="." method="_on_return_button_pressed"]
