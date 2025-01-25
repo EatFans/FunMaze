@@ -51,7 +51,7 @@ text = "Back
 metadata/_edit_use_anchors_ = true
 
 [node name="Player" parent="." instance=ExtResource("3_umlll")]
-position = Vector2(1025, 571)
+position = Vector2(1002, 561)
 
 [node name="monster1" parent="." instance=ExtResource("4_nvfqs")]
 position = Vector2(358, 101)
