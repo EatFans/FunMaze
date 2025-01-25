@@ -1,3 +1,23 @@
-[gd_scene format=3 uid="uid://cpoo411y236h4"]
+[gd_scene load_steps=3 format=3 uid="uid://cpoo411y236h4"]
+
+[ext_resource type="Script" path="res://script/level5.cs" id="1_4pubd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ttc4k"]
 
 [node name="Level5" type="Node2D"]
+script = ExtResource("1_4pubd")
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[node name="ReturnButton" type="Button" parent="TileMap"]
+offset_left = 9.0
+offset_top = 3.0
+offset_right = 83.0
+offset_bottom = 67.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ttc4k")
+text = "Back
+"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="TileMap/ReturnButton" to="." method="_on_return_button_pressed"]
